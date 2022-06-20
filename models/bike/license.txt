@@ -1,0 +1,11 @@
+Model Information:
+* title:	HD GTA SA BMX
+* source:	https://sketchfab.com/3d-models/hd-gta-sa-bmx-f89ed32ea6744928b619636f00f5ff5b
+* author:	Zeneric (https://sketchfab.com/zeneric9)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "HD GTA SA BMX" (https://sketchfab.com/3d-models/hd-gta-sa-bmx-f89ed32ea6744928b619636f00f5ff5b) by Zeneric (https://sketchfab.com/zeneric9) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
