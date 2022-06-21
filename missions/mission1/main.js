@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const bikeAnchor = mindarThree.addAnchor(0);
 
         const bike = await loadGLTF('../../models/bike/scene.gltf');
-        scene.scale.set(0.3, 0.3, 0.3);
-        scene.position.set(0.2, -0.1, 0.2);
+        scene.scale.set(0.1, 0.1, 0.1);
+        scene.position.set(0, -0.4, 0);
         bikeAnchor.group.add(bike.scene);
 
         await mindarThree.start();
