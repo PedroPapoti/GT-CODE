@@ -25,16 +25,13 @@ To understand more about image tracking I will leave some support links:
 
 - GTA: It is an action-adventure video game.
 
-- GT-CODE: A series of augmented reality **missions** with image detections inspired by GTA San Andreas.
+- GT-CODE: A series of **missions** in augmented reality with image detection.
 
 ## Missions
 
-If you've played GTA you know that to evolve in the game you must do the **missions**. In this way, each exercise in augmented reality we will call **missions**,
-If you've played GTA you know that to evolve in the game you must do the missions. In this way, each exercise in augmented reality we will call missions,
-as the number of missions increases, a new functionality will be added.
-Example :
+If you've played GTA, you know that in order to evolve in the game, you must complete missions. In this way, each exercise in augmented reality we will call missions, where I will explain how the structure for projecting images in augmented reality is.
 
-- If mission 1 is just projecting an image, mission 2 will be projecting the image and adding an audio to the image.
+It's very important that you don't skip missions because to understand mission 3 you need to have gone through mission 1.
 
 Get ready to meet the future of apps and the web!!
 
