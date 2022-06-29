@@ -35,6 +35,8 @@ It's very important that you don't skip missions because to understand mission 3
 
 Get ready to meet the future of apps and the web!!
 
+[Start here](https://github.com/PedroPapoti/GT-CODE/tree/main/missions/mission1) !!
+
 If you have any doubts, please contact me by email pedropapoti@gmail.com.
 
 
