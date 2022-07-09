@@ -113,19 +113,29 @@ document.addEventListener('DOMContentLoaded', ()=> {
         const missionsGtcode = [mission1Gtcode, mission2Gtcode, mission3Gtcode];
         let currentMissions = 0;
 
-        
+        document.body.addEventListener('click', (e) => {
+            const mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+            const mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
+            const mouse = new THREE.Vector2(mouseX,mouseY);
+            const raycaster = new THREE.Raycaster();
+            raycaster.setFromCamera(mouse, camera);
+            const intersects = raycaster.intersectObjects(scene.children, true);
 
-
-
-
-
-
-
-
-
-
-
-
-
+            if (intersects.length > 0) {
+                let o = intersects[0].object;
+                while (o.parent && !o.userData.clickable) {
+                    o = o.parent;
+                }
+                if (o.userData.clickable) {
+                    if (o === leftIcon || o === rightIcon) {
+                        if (o === leftIcon) { 
+                            currentMissions = (currentMissions - 1 + missionsGtcode.length) % missionsGtcode.length;
+                        } else { 
+                            currentMissions = (currentMissions + 1)
+                        }
+                    }
+                }
+            }
+        });
     }
 });
