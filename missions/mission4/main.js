@@ -131,8 +131,18 @@ document.addEventListener('DOMContentLoaded', ()=> {
                         if (o === leftIcon) { 
                             currentMissions = (currentMissions - 1 + missionsGtcode.length) % missionsGtcode.length;
                         } else { 
-                            currentMissions = (currentMissions + 1)
+                            currentMissions = (currentMissions + 1) % missionsGtcode.length;
                         }
+                        mission1GtcodeVideo.pause();
+                        for (let i = 0; i < missionsGtcode.length; i++) {
+                            missionsGtcode.remove(missionsGtcode[i]);
+                        }
+                        mission4Group.add(missionsGtcode[currentMissions]);
+                    } else if (o === mission1Gtcode) {
+                        mission4Group.remove(mission1Gtcode);
+                        mission4Group.add(mission1GtcodeVideo);
+                        missionsGtcode[0] = mission1GtcodeVideo;
+                        mission1GtcodeVideo.play();
                     }
                 }
             }
