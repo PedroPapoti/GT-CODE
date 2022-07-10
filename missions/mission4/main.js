@@ -31,9 +31,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
             '../../targets/mission4/right.png',
             '../../targets/mission4/left.png',
             '../../targets/mission4/logo1.png',
-            '../../targets/mission4/mission1.png',
-            '../../targets/mission4/mission2.png',
-            '../../targets/mission4/mission3.png',
+            '../../targets/mission4/mission1-fundo.png',
+            '../../targets/mission4/mission2-fundo.png',
+            '../../targets/mission4/mission3-fundo.png',
         ]);
 
         const planeGeometry = new THREE.PlaneGeometry(1, 0.552);
