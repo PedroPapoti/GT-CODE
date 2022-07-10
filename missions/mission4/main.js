@@ -143,9 +143,39 @@ document.addEventListener('DOMContentLoaded', ()=> {
                         mission4Group.add(mission1GtcodeVideo);
                         missionsGtcode[0] = mission1GtcodeVideo;
                         mission1GtcodeVideo.play();
+                    } else if (o === mission1GtcodeVideo) {
+                        if (mission1GtcodeVideo.paused) { 
+                            mission1GtcodeVideo.play();
+                        } else {
+                            mission1GtcodeVideo.pouse();
+                        }
+                    } else if (o === bombIcon ) {
+                        textObj.visible = true;
+                        textElement.innerHTML = "Faça como uma bomba!! Exploda e expalhe o projeto com seus amigos!!";
+                    } else if (o === laptopIcon) {
+                        textObj.visible = true;
+                        textElement.innerHTML = "Faça um fork do projeto em https://github.com/PedroPapoti";
+                    } else if (0 === filmIcon) { 
+                        textObj.visible = true;
+                        textElement.innerHTML = "Aprenda mais sobre os bastidores do projeto pelo meu isnta!!"
                     }
                 }
             }
         });
+
+        const clock = new THREE.Clock();
+        await mindarThree.start();
+        renderer.setAnimationLoop(() => {
+            const delta = clock.getDelta();
+            const elapse = clock.getElapsedTime();
+            const iconScale = 1 + 0.2 * Math.sin(elapse*5);
+            [bombIcon, laptopIcon, filmIcon].forEach((icon) => {
+                icon.scale.set(iconScale, iconScale, iconScale);
+            });
+
+            renderer.render(scene,camera);
+            cssRenderer.render(cssScene, camera);
+        });
     }
+    start();
 });
