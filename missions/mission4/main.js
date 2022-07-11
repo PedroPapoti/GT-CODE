@@ -130,49 +130,49 @@ document.addEventListener('DOMContentLoaded', () => {
       const intersects = raycaster.intersectObjects(scene.children, true);
 
     if (intersects.length > 0) {
-	let o = intersects[0].object; 
-	while (o.parent && !o.userData.clickable) {
-	  o = o.parent;
-	}
-	if (o.userData.clickable) {
-	  if (o === leftIcon || o === rightIcon) {
-	    if (o === leftIcon) {
-	      currentMissions = (currentMissions - 1 + missionsGtcode.length) % missionsGtcode.length;
-	    } else {
-	      currentMissions = (currentMissions + 1) % missionsGtcode.length;
-	    }
-	    mission1Video.pause();
-	    for (let i = 0; i < missionsGtcode.length; i++) {
-	      mission4Group.remove(missionsGtcode[i]);
-	    }
-	    mission4Group.add(missionsGtcode[currentMissions]);
-	  } else if (o === mission1Gtcode) {
-	    mission4Group.remove(mission1Gtcode);
-	    mission4Group.add(mission1GtcodeVideo);
-	    missionsGtcode[0] = mission1GtcodeVideo;
-	    mission1Video.play();
-	  } else if (o === mission1GtcodeVideo) {
-	    if (mission1Video.paused) {
-	      mission1Video.play();
-	    } else {
-	      mission1Video.pause();
-	    }
-        } else if (o === bombIcon ) {
-            textObj.visible = true;
-            textElement.innerHTML = "Faça como uma bomba!! Exploda e expalhe o projeto com seus amigos!!";
-        }else if(o === bicepsIcon) {
-            textObj.visible = true;
-            textElement.innerHTML = "Vamos exercitar!! Agora faça a sua versão do projeto em AR!!"
-        } else if (o === laptopIcon) {
-            textObj.visible = true;
-            textElement.innerHTML = "Faça um fork do projeto em https://github.com/PedroPapoti";
-        } else if (o === filmIcon) { 
-            textObj.visible = true;
-            textElement.innerHTML = "Aprenda mais sobre os bastidores do projeto pelo meu isnta!!"
-        }
-	}
+      let o = intersects[0].object;   
+      while (o.parent && !o.userData.clickable) {
+        o = o.parent;
       }
-    });
+      if (o.userData.clickable) {
+        if (o === leftIcon || o === rightIcon) {
+          if (o === leftIcon) {
+            currentMissions = (currentMissions - 1 + missionsGtcode.length) % missionsGtcode.length;
+          } else {
+            currentMissions = (currentMissions + 1) % missionsGtcode.length;
+          }
+          mission1Video.pause();
+          for (let i = 0; i < missionsGtcode.length; i++) {
+            mission4Group.remove(missionsGtcode[i]);
+          }
+          mission4Group.add(missionsGtcode[currentMissions]);
+        } else if (o === mission1Gtcode) {
+          mission4Group.remove(mission1Gtcode);
+          mission4Group.add(mission1GtcodeVideo);
+          missionsGtcode[0] = mission1GtcodeVideo;
+          mission1Video.play();
+        } else if (o === mission1GtcodeVideo) {
+          if (mission1Video.paused) {
+            mission1Video.play();
+          } else {
+            mission1Video.pause();
+          }
+            } else if (o === bombIcon ) {
+                textObj.visible = true;
+                textElement.innerHTML = "Faça como uma bomba!! Exploda e expalhe o projeto com seus amigos!!";
+            }else if(o === bicepsIcon) {
+                textObj.visible = true;
+                textElement.innerHTML = "Vamos exercitar!! Agora faça a sua versão do projeto em AR!!"
+            } else if (o === laptopIcon) {
+                textObj.visible = true;
+                textElement.innerHTML = "Faça um fork do projeto em https://github.com/PedroPapoti";
+            } else if (o === filmIcon) { 
+                textObj.visible = true;
+                textElement.innerHTML = "Aprenda mais sobre os bastidores do projeto pelo meu isnta!!"
+            }
+         }
+      }
+   });
 
     const clock = new THREE.Clock();
     await mindarThree.start();
